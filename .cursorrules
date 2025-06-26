@@ -27,6 +27,7 @@ babylon-web-game/
 - 遵循Vue 3 Composition API的最佳实践
 - 使用Babylon.js进行3D场景和游戏逻辑开发
 - 保持代码结构清晰，组件化开发
+- 请遵守面向对象原则，使用类和对象来组织代码
 
 ## 游戏特性
 - 3D角色扮演游戏

@@ -1,5 +1,144 @@
-# Vue 3 + TypeScript + Vite
+# 3D角色扮演游戏 - Babylon.js + Vue + TypeScript
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## 项目概述
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+这是一个使用现代Web技术栈开发的3D角色扮演游戏项目，采用面向对象设计原则和第三人称视角。
+
+## 技术栈
+
+- **3D引擎**: Babylon.js - 强大的WebGL 3D引擎
+- **前端框架**: Vue 3 - 渐进式JavaScript框架
+- **构建工具**: Vite - 快速的前端构建工具
+- **开发语言**: TypeScript - 类型安全的JavaScript超集
+
+## 游戏特性
+
+- **第三人称视角**: 跟随相机系统，支持鼠标控制视角旋转和缩放
+- **面向对象架构**: 清晰的类结构，易于扩展和维护
+- **角色系统**: 完整的玩家角色，包含生命值、耐力值、等级和经验系统
+- **输入管理**: 统一的输入处理系统，支持键盘和鼠标输入
+- **游戏世界**: 丰富的3D环境，包含地形、障碍物、装饰物
+- **用户界面**: 现代化的游戏UI，显示角色状态和控制说明
+
+## 项目架构
+
+### 核心类结构
+
+```
+src/game/
+├── GameEngine.ts      # 游戏引擎主类
+├── Player.ts          # 玩家角色类
+├── CameraController.ts # 相机控制器类
+├── InputManager.ts    # 输入管理器类
+├── World.ts           # 游戏世界类
+└── GameUI.ts          # 用户界面类
+```
+
+### 类职责
+
+- **GameEngine**: 管理整个游戏的生命周期，协调各个系统
+- **Player**: 管理玩家角色的所有属性和行为
+- **CameraController**: 处理第三人称相机的跟随和交互
+- **InputManager**: 统一处理键盘和鼠标输入
+- **World**: 管理游戏世界的地形、环境和物体
+- **GameUI**: 管理用户界面元素的显示和更新
+
+## 控制说明
+
+- **WASD 或 方向键**: 移动角色
+- **空格键 或 左键**: 攻击
+- **Shift**: 冲刺
+- **鼠标滚轮**: 缩放视角
+- **右键拖拽**: 旋转视角
+
+## 开发环境设置
+
+### 安装依赖
+
+```bash
+npm install
+```
+
+### 启动开发服务器
+
+```bash
+npm run dev
+```
+
+### 构建生产版本
+
+```bash
+npm run build
+```
+
+### 预览生产版本
+
+```bash
+npm run preview
+```
+
+## 游戏系统
+
+### 角色系统
+
+- **生命值**: 角色的健康状态
+- **耐力值**: 影响攻击和移动能力
+- **等级**: 角色成长系统
+- **经验值**: 升级所需资源
+
+### 相机系统
+
+- **跟随相机**: 自动跟随玩家角色
+- **视角控制**: 支持鼠标交互
+- **平滑移动**: 相机移动具有平滑过渡效果
+
+### 输入系统
+
+- **统一输入**: 所有输入通过InputManager处理
+- **状态管理**: 实时跟踪输入状态
+- **事件处理**: 支持键盘和鼠标事件
+
+### 世界系统
+
+- **地形生成**: 程序化生成游戏世界
+- **环境装饰**: 树木、岩石、水体等装饰物
+- **光照系统**: 环境光和方向光
+- **阴影系统**: 实时阴影渲染
+
+## 扩展指南
+
+### 添加新功能
+
+1. 在相应的类中添加新方法
+2. 在GameEngine中注册新系统
+3. 更新UI以显示新功能
+
+### 添加新角色
+
+1. 继承Player类或创建新的角色类
+2. 实现必要的接口方法
+3. 在GameEngine中注册新角色类型
+
+### 添加新世界元素
+
+1. 在World类中添加新的创建方法
+2. 定义物体的属性和行为
+3. 在initialize方法中调用
+
+## 性能优化
+
+- 使用对象池管理频繁创建的对象
+- 实现LOD（细节层次）系统
+- 优化渲染循环
+- 使用Babylon.js的内置优化功能
+
+## 浏览器兼容性
+
+- Chrome 80+
+- Firefox 75+
+- Safari 13+
+- Edge 80+
+
+## 许可证
+
+MIT License
