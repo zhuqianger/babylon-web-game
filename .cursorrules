@@ -1,0 +1,40 @@
+# 3D角色扮演游戏项目 - Babylon.js + Vue + Vite
+
+## 项目概述
+这是一个使用现代Web技术栈开发的3D角色扮演游戏项目。
+
+## 技术栈
+- **3D引擎**: Babylon.js - 强大的WebGL 3D引擎
+- **前端框架**: Vue 3 - 渐进式JavaScript框架
+- **构建工具**: Vite - 快速的前端构建工具
+- **开发语言**: TypeScript - 类型安全的JavaScript超集
+
+## 项目结构
+```
+babylon-web-game/
+├── src/                    # 源代码目录
+│   ├── components/         # Vue组件
+│   ├── assets/            # 静态资源
+│   ├── App.vue           # 主应用组件
+│   └── main.ts           # 应用入口
+├── public/               # 公共资源
+├── index.html           # HTML模板
+└── package.json         # 项目配置
+```
+
+## 开发规范
+- 使用TypeScript进行类型安全的开发
+- 遵循Vue 3 Composition API的最佳实践
+- 使用Babylon.js进行3D场景和游戏逻辑开发
+- 保持代码结构清晰，组件化开发
+
+## 游戏特性
+- 3D角色扮演游戏
+- 实时3D渲染
+- 交互式游戏体验
+- 响应式设计
+
+## 开发环境
+- Node.js环境
+- 支持热重载的开发服务器
+- TypeScript编译支持 
